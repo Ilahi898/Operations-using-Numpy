@@ -1,0 +1,18 @@
+import numpy as np
+
+# 1. Create an array consisting of linearly spaced elements between 0 and 9
+arr = np.arange(10)
+print("Original Array:", arr)
+
+# 2. Replace all odd numbers with -1 without modifying the original array
+new_arr = np.where(arr % 2 != 0, -1, arr)
+print("Modified Array:", new_arr)
+
+# 3. Convert the original 1D array into a 2D array with two rows
+arr_2d = arr.reshape(2, 5)
+print("2D Array:")
+print(arr_2d)
+
+# 4. Find the sum of all even numbers in the original array
+even_sum = np.sum(arr[arr % 2 == 0])
+print("Sum of Even Numbers:", even_sum)
